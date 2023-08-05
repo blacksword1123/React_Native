@@ -12,7 +12,8 @@ const IncreamentCounter = () => {
     <View>
       <Text style={{ fontSize: 24, fontStyle: "bold" }}>Your age: {age}</Text>
       <Text>{"\n\n"}</Text>
-      <Button title="+3" onPress={() => setAge(age + 3)} />
+      <Button title="+3" onPress={() => setAge(age + 3)}/>
+      {/* <Button title="+3" onPress={() => {for(let i=1;i<=3,i++){increment()}}} /> */}
       <Text>{"\n\n"}</Text>
       <Button
         title="+1"
