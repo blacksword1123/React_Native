@@ -8,15 +8,15 @@ const SecondPage = ({ navigation }) => {
       <Text>{"\n"}</Text>
       <Button
         title="Go Back"
-        onPress={() => navigation.goBack("First")}
+        onPress={() => navigation.goBack("First Page")}
       />
       <Button
         title="Go to SecondPage... AGAIN"
-        onPress={() => navigation.push("Second")}
+        onPress={() => navigation.push("Second Page")}
       />
       <Button
         title="Go to First Page"
-        onPress={() => navigation.navigate("First")}
+        onPress={() => navigation.navigate("First Page")}
       />
       <Button
         title="Go to Third Page"

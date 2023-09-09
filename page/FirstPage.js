@@ -3,12 +3,12 @@ import React from 'react'
 
 const FirstPage = ({ navigation }) => {
   return (
-    <View style={[styles.container,styles.textStyle]}>
+    <View style={[styles.container,styles.textStyle]} >
       <Text>This is the First Page of the app</Text>
       <Text>{"\n"}</Text>
       <Button
         title="Go to second page"
-        onPress={() => navigation.navigate("Second")}
+        onPress={() => navigation.navigate("SecondDrawer")}
       />
     </View>
   )
