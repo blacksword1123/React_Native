@@ -1,22 +1,34 @@
-import { StyleSheet, View } from "react-native";
+import { View, Text, Button } from "react-native";
 import React from "react";
-import Example_useEffect from "./components/Example_useEffect";
-import UseEffectFlatList from "./components/UseEffectFlatList";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./screens/HomeScreen";
+import DetailsScreen from "./screens/DetailsScreen";
+import IndexScreen from "./screens/IndexScreen";
+import CreatePostScreen from "./screens/CreatePostScreen";
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <UseEffectFlatList />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        mode = 'model'
+        screenOptions={{
+          headerStyle: { backgroundColor: "#008b8b" },
+          headerTintColor: "#ffff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}
+      >
+        <Stack.Screen
+          name='Index' component={IndexScreen} options={{titile:'MainPage'}}
+        />
+        <Stack.Screen name="CreatePost" component={CreatePostScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
