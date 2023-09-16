@@ -10,15 +10,18 @@ const SecondPage = ({ navigation }) => {
         title="Go Back"
         onPress={() => navigation.goBack("First Page")}
       />
-      <Button
+      <Text>{"\n"}</Text>
+      <Button disabled
         title="Go to SecondPage... AGAIN"
         onPress={() => navigation.push("Second Page")}
       />
+      <Text>{"\n"}</Text>
       <Button
         title="Go to First Page"
         onPress={() => navigation.navigate("First Page")}
       />
-      <Button
+      <Text>{"\n"}</Text>
+      <Button disabled
         title="Go to Third Page"
         onPress={() => navigation.navigate("Third")}
       />
